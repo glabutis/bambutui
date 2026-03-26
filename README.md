@@ -1,17 +1,18 @@
 # bambutui
 
-A terminal UI for controlling BambuLab 3D printers over your local network.
+A terminal UI for monitoring BambuLab 3D printers over your local network.
 
 ![Python 3.9+](https://img.shields.io/badge/python-3.9%2B-blue)
 
 ## Features
 
 - Live print status, temperatures, and progress
-- Pause, resume, and stop prints
+- Temperature history graphs for bed, nozzle, and chamber
 - Print speed control (Silent / Standard / Sport / Ludicrous)
 - Chamber light toggle
-- Upload pre-sliced `.3mf` files and start prints — no cloud required
 - Works with all BambuLab printers (X1, P1, A1 series)
+
+> **Note:** Pause, resume, stop, and file upload require Developer Mode to be enabled on the printer (Settings → Network → LAN Only Mode → Developer Mode). Without it, BambuLab firmware blocks third-party MQTT control commands.
 
 ## Install
 
@@ -45,9 +46,6 @@ Config is saved to `~/.config/bambutui/config.json`.
 
 | Key | Action |
 |-----|--------|
-| `p` | Pause / Resume |
-| `s` | Stop print |
-| `f` | Send file |
 | `c` | Controls (speed, light) |
 | `r` | Refresh status |
 | `q` | Quit |
