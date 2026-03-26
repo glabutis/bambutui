@@ -55,7 +55,10 @@ class TempGauge(Widget):
 
     def _refresh_value(self) -> None:
         label = self.query_one("#temp-value", Label)
-        label.update(f"{self.current:.1f}° → {self.target:.1f}°")
+        if self.target > 0:
+            label.update(f"{self.current:.1f}° → {self.target:.1f}°")
+        else:
+            label.update(f"{self.current:.1f}°")
 
 
 class TempDisplay(Widget):

@@ -6,7 +6,6 @@ from textual.binding import Binding
 from bambutui.config import PrinterConfig, load_config
 from bambutui.printer.mqtt_client import MQTTClient
 from bambutui.printer.state import PrinterState
-from bambutui.screens.camera import CameraScreen
 from bambutui.screens.control import ControlScreen
 from bambutui.screens.dashboard import DashboardScreen
 from bambutui.screens.setup import SetupScreen
@@ -82,9 +81,6 @@ class BambuTUI(App):
         if self.mqtt is not None:
             self.mqtt.request_full_status()
 
-    def action_camera(self) -> None:
-        if self.config is not None:
-            self.push_screen(CameraScreen(self.config.printer_ip, self.config.access_code))
 
     def on_unmount(self) -> None:
         if self.mqtt is not None:

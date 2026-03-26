@@ -16,7 +16,6 @@ class DashboardScreen(Screen):
     BINDINGS = [
         Binding("c", "control", "Controls", show=True),
         Binding("r", "refresh", "Refresh", show=True),
-        Binding("v", "camera", "Camera [exp]", show=True),
         Binding("q", "app.quit", "Quit", show=True),
     ]
 
@@ -50,5 +49,3 @@ class DashboardScreen(Screen):
     def action_refresh(self) -> None:
         self.app.action_refresh()
 
-    def action_camera(self) -> None:
-        self.app.action_camera()
