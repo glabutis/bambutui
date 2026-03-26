@@ -116,23 +116,11 @@ class MQTTClient:
 
     # Convenience wrappers
 
-    def stop(self) -> None:
-        self.publish(commands.stop_print())
-
-    def pause(self) -> None:
-        self.publish(commands.pause_print())
-
-    def resume(self) -> None:
-        self.publish(commands.resume_print())
-
     def set_speed(self, level: int) -> None:
         self.publish(commands.set_print_speed(level))
 
     def set_light(self, on: bool) -> None:
         self.publish(commands.set_chamber_light(on))
-
-    def start_print(self, filename: str, **kwargs: Any) -> None:
-        self.publish(commands.start_print(filename, **kwargs))
 
     def request_full_status(self) -> None:
         self.publish(commands.pushall())

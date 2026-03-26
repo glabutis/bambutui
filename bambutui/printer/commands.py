@@ -15,18 +15,6 @@ def pushall() -> str:
     return json.dumps({"pushing": {"sequence_id": _seq_id(), "command": "pushall", "version": 1, "push_target": 1}})
 
 
-def stop_print() -> str:
-    return json.dumps({"print": {"sequence_id": _seq_id(), "command": "stop", "param": ""}})
-
-
-def pause_print() -> str:
-    return json.dumps({"print": {"sequence_id": _seq_id(), "command": "pause", "param": ""}})
-
-
-def resume_print() -> str:
-    return json.dumps({"print": {"sequence_id": _seq_id(), "command": "resume", "param": ""}})
-
-
 def set_print_speed(level: int) -> str:
     """level: 1=silent, 2=standard, 3=sport, 4=ludicrous"""
     level = max(1, min(4, level))

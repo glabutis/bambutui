@@ -8,7 +8,6 @@ from bambutui.printer.mqtt_client import MQTTClient
 from bambutui.printer.state import PrinterState
 from bambutui.screens.control import ControlScreen
 from bambutui.screens.dashboard import DashboardScreen
-from bambutui.screens.files import FileScreen
 from bambutui.screens.setup import SetupScreen
 
 
@@ -18,7 +17,6 @@ class BambuTUI(App):
     SCREENS = {
         "dashboard": DashboardScreen,
         "control": ControlScreen,
-        "files": FileScreen,
     }
 
     BINDINGS = [
@@ -79,21 +77,10 @@ class BambuTUI(App):
         except Exception:
             pass
 
-    def action_pause_resume(self) -> None:
-        if self.mqtt is None:
-            return
-        if self.mqtt.state.is_printing:
-            self.mqtt.pause()
-        elif self.mqtt.state.is_paused:
-            self.mqtt.resume()
-
-    def action_stop(self) -> None:
-        if self.mqtt is not None:
-            self.mqtt.stop()
-
     def action_refresh(self) -> None:
         if self.mqtt is not None:
             self.mqtt.request_full_status()
+
 
     def on_unmount(self) -> None:
         if self.mqtt is not None:

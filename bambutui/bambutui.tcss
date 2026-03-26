@@ -59,6 +59,11 @@ PrintProgress {
     margin: 0 1;
 }
 
+/* ── Temp Sparklines ── */
+#temp-bed Sparkline { color: $warning; }
+#temp-nozzle Sparkline { color: $error; }
+#temp-chamber Sparkline { color: $primary; }
+
 /* ── Control Screen ── */
 #control-header {
     margin: 1 2;

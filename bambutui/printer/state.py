@@ -69,7 +69,7 @@ class PrinterState:
             self.chamber_temp = float(data["chamber_temper"])
         if "gcode_state" in data:
             try:
-                self.gcode_state = GcodeState(data["gcode_state"])
+                self.gcode_state = GcodeState(data["gcode_state"].upper())
             except ValueError:
                 self.gcode_state = GcodeState.UNKNOWN
         if "mc_percent" in data:

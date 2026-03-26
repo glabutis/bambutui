@@ -3,7 +3,7 @@ from textual.binding import Binding
 from textual.screen import Screen
 from textual.widgets import Footer, Header
 
-from bambutui.printer.state import GcodeState, PrinterState
+from bambutui.printer.state import PrinterState
 from bambutui.widgets.progress_bar import PrintProgress
 from bambutui.widgets.status_bar import StatusBar
 from bambutui.widgets.temp_display import TempDisplay
@@ -14,9 +14,6 @@ class DashboardScreen(Screen):
 
     TITLE = "BambuTUI"
     BINDINGS = [
-        Binding("p", "pause_resume", "Pause/Resume", show=True),
-        Binding("s", "stop", "Stop", show=True),
-        Binding("f", "files", "Send File", show=True),
         Binding("c", "control", "Controls", show=True),
         Binding("r", "refresh", "Refresh", show=True),
         Binding("q", "app.quit", "Quit", show=True),
@@ -46,17 +43,9 @@ class DashboardScreen(Screen):
             state.subtask_name,
         )
 
-    def action_pause_resume(self) -> None:
-        self.app.action_pause_resume()
-
-    def action_stop(self) -> None:
-        self.app.action_stop()
-
-    def action_files(self) -> None:
-        self.app.push_screen("files")
-
     def action_control(self) -> None:
         self.app.push_screen("control")
 
     def action_refresh(self) -> None:
         self.app.action_refresh()
+
