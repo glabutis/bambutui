@@ -1,6 +1,6 @@
 # bambutui
 
-A terminal UI for controlling BambuLab 3D printers over your local network.
+A terminal UI for monitoring BambuLab 3D printers over your local network.
 
 ![Python 3.9+](https://img.shields.io/badge/python-3.9%2B-blue)
 
