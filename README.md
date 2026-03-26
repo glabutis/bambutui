@@ -16,7 +16,7 @@ A terminal UI for controlling BambuLab 3D printers over your local network.
 ## Install
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/YOUR_USERNAME/bambutui/main/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/glabutis/bambutui/main/install.sh | bash
 ```
 
 Then add `~/.local/bin` to your PATH if it isn't already:
@@ -61,7 +61,7 @@ Config is saved to `~/.config/bambutui/config.json`.
 ## Development
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/bambutui
+git clone https://github.com/glabutis/bambutui
 cd bambutui
 python3 -m venv .venv && source .venv/bin/activate
 pip install -e .
