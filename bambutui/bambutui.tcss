@@ -1,0 +1,134 @@
+/* ── Global ── */
+Screen {
+    background: $background;
+    color: $text;
+}
+
+Header {
+    background: $primary-darken-2;
+    color: $text;
+    text-style: bold;
+}
+
+Footer {
+    background: $primary-darken-3;
+}
+
+/* ── Setup Screen ── */
+#setup-intro {
+    margin: 1 2;
+    color: $text-muted;
+}
+
+.field-label {
+    margin: 1 2 0 2;
+    color: $text-muted;
+    text-style: bold;
+}
+
+Input {
+    margin: 0 2;
+}
+
+#error-msg {
+    margin: 1 2;
+    color: $error;
+}
+
+#btn-save {
+    margin: 1 2;
+    width: 20;
+}
+
+/* ── Dashboard ── */
+StatusBar {
+    dock: top;
+    height: 1;
+    background: $surface;
+}
+
+TempDisplay {
+    margin: 1 1 0 1;
+}
+
+TempGauge {
+    margin: 0 1;
+}
+
+PrintProgress {
+    margin: 0 1;
+}
+
+/* ── Control Screen ── */
+#control-header {
+    margin: 1 2;
+    text-style: bold;
+    color: $primary;
+}
+
+#state-label {
+    margin: 0 2 1 2;
+    color: $text-muted;
+}
+
+.section-title {
+    margin: 1 2 0 2;
+    text-style: bold;
+    color: $primary-lighten-1;
+}
+
+#divider-1, #divider-2, #divider-3 {
+    margin: 1 2 0 2;
+    color: $primary-darken-2;
+}
+
+ControlScreen Button {
+    margin: 0 2 0 2;
+    width: 25;
+}
+
+/* ── File Screen ── */
+#files-header {
+    margin: 1 2;
+    color: $text-muted;
+}
+
+DirectoryTree {
+    margin: 0 1;
+    height: 15;
+    border: round $primary-darken-2;
+}
+
+#selected-label {
+    margin: 1 2;
+    color: $success;
+    text-style: bold;
+}
+
+FileScreen .section-title {
+    margin: 1 2 0 2;
+    text-style: bold;
+    color: $primary-lighten-1;
+}
+
+FileScreen Switch {
+    margin: 0 2;
+}
+
+FileScreen Static {
+    margin: 1 2 0 2;
+}
+
+#btn-upload {
+    margin: 1 2;
+    width: 20;
+}
+
+#upload-status {
+    margin: 0 2;
+    color: $text-muted;
+}
+
+#upload-progress {
+    margin: 0 2;
+}

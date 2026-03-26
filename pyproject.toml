@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "bambutui"
+version = "0.1.0"
+description = "TUI application to control BambuLab 3D printers over local network"
+requires-python = ">=3.9"
+dependencies = [
+    "textual>=0.70.0",
+    "paho-mqtt>=2.1.0",
+]
+
+[project.scripts]
+bambutui = "bambutui.__main__:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["bambutui*"]
