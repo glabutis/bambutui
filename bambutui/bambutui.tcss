@@ -59,6 +59,11 @@ PrintProgress {
     margin: 0 1;
 }
 
+/* ── Temp Sparklines ── */
+#temp-bed Sparkline { color: $warning; }
+#temp-nozzle Sparkline { color: $error; }
+#temp-chamber Sparkline { color: $primary; }
+
 /* ── Control Screen ── */
 #control-header {
     margin: 1 2;
@@ -85,6 +90,23 @@ PrintProgress {
 ControlScreen Button {
     margin: 0 2 0 2;
     width: 25;
+}
+
+/* ── Camera Screen ── */
+#camera-header {
+    margin: 0 2;
+    color: $warning;
+    text-style: bold;
+}
+
+#camera-view {
+    margin: 0 1;
+    height: 1fr;
+}
+
+#camera-unavailable {
+    margin: 2 4;
+    color: $text-muted;
 }
 
 /* ── File Screen ── */

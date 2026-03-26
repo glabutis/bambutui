@@ -41,6 +41,11 @@ class ControlScreen(Screen):
 
         yield Footer()
 
+    def on_screen_resume(self) -> None:
+        app = self.app
+        if app.mqtt is not None:  # type: ignore[attr-defined]
+            self.update_state(app.mqtt.state)  # type: ignore[attr-defined]
+
     def update_state(self, state: PrinterState) -> None:
         label = self.query_one("#state-label", Label)
         label.update(f"Status: {state.gcode_state.value}  |  Speed: {state.speed_level}")

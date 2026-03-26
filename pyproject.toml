@@ -12,6 +12,9 @@ dependencies = [
     "paho-mqtt>=2.1.0",
 ]
 
+[project.optional-dependencies]
+camera = ["opencv-python-headless>=4.8.0"]
+
 [project.scripts]
 bambutui = "bambutui.__main__:main"
 
