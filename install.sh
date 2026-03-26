@@ -3,7 +3,7 @@ set -e
 
 INSTALL_DIR="$HOME/.local/share/bambutui"
 BIN_DIR="$HOME/.local/bin"
-REPO="https://github.com/YOUR_USERNAME/bambutui"
+REPO="https://github.com/glabutis/bambutui"
 
 # ── Check Python ──────────────────────────────────────────────────────────────
 if command -v python3 &>/dev/null; then
